@@ -6,32 +6,32 @@ for(let i = 0; i <= 9; i++) {
 	document
 		.getElementById(`${i}`)
 		.addEventListener("click", () => {
-			input.value += i;
+			input.textContent += i;
 		});
 }
 
 // Operators
-document.getElementById("plus").onclick = () => input.value += "+";
-document.getElementById("-").onclick = () => input.value += "-";
-document.getElementById("*").onclick = () => input.value += "*";
-document.getElementById("divi").onclick = () => input.value += "/";
-document.getElementById("dot").onclick = () => input.value += ".";
-document.getElementById("op").onclick = () => input.value += "(";
-document.getElementById("cl").onclick = () => input.value += ")";
+document.getElementById("plus").onclick = () => input.textContent += "+";
+document.getElementById("-").onclick = () => input.textContent += "-";
+document.getElementById("*").onclick = () => input.textContent += "*";
+document.getElementById("divi").onclick = () => input.textContent += "/";
+document.getElementById("dot").onclick = () => input.textContent += ".";
+document.getElementById("op").onclick = () => input.textContent += "(";
+document.getElementById("cl").onclick = () => input.textContent += ")";
 
 // Clear
-document.getElementById("C").onclick = () => input.value = "";
+document.getElementById("C").onclick = () => input.textContent = "";
 
 // back
 document.getElementById("back").onclick = () => {
-	input.value = Math.floor(Number(input.value) / 10);
+	input.textContent = Math.floor(Number(input.textContent) / 10);
 }
 
 // Answer
 document.getElementById("equal").onclick = () => {
 	try {
-		input.value = eval(input.value);
+		input.textContent = eval(input.textContent);
 	} catch (e) {
-		input.value = "Error";
+		input.textContent = "Error";
 	}
 };
