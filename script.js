@@ -30,7 +30,14 @@ document.getElementById("back").onclick = () => {
 // Answer
 document.getElementById("equal").onclick = () => {
 	try {
-		input.textContent = eval(input.textContent);
+		const result = eval(input.textContent);
+
+		if(!isFinite(result {
+			input.textContent = "Error";
+		}
+		else {
+			input.textContent = result;
+		}
 	} catch (e) {
 		input.textContent = "Error";
 	}
