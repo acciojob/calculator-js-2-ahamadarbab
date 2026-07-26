@@ -24,7 +24,7 @@ document.getElementById("C").onclick = () => input.textContent = "";
 
 // back
 document.getElementById("back").onclick = () => {
-	input.textContent = Math.floor(Number(input.textContent) / 10);
+	input.textContent = input.textContent.slice(0, -1);
 }
 
 // Answer
