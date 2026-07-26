@@ -32,7 +32,7 @@ document.getElementById("equal").onclick = () => {
 	try {
 		const result = eval(input.textContent);
 
-		if(!isFinite(result {
+		if(!isFinite(result)) {
 			input.textContent = "Error";
 		}
 		else {
